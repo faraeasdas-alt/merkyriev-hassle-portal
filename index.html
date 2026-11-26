@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090714">
+  <title>Merkyriev | Hassle Online</title>
+  <style>
+    :root {
+      --bg: #090714;
+      --panel: #151126;
+      --purple: #9b5cff;
+      --cyan: #57e6ff;
+      --text: #f7f3ff;
+      --muted: #b8b1cc;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 15% 0%, #34205b 0, transparent 35%),
+        radial-gradient(ellipse at 100% 35%, #102b49 0, transparent 30%),
+        var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid #ffffff16;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 900;
+      letter-spacing: .5px;
+    }
+
+    .brand span { color: var(--cyan); }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover { color: var(--cyan); }
+
+    .hero {
+      padding: 78px 0 60px;
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid #9b5cff70;
+      border-radius: 999px;
+      color: var(--cyan);
+      background: #9b5cff12;
+      font-size: 13px;
+    }
+
+    h1 {
+      margin: 22px 0 12px;
+      font-size: clamp(38px, 8vw, 76px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+    }
+
+    h1 span {
+      color: var(--purple);
+      text-shadow: 0 0 30px #9b5cff55;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid #ffffff25;
+      border-radius: 12px;
+      background: #ffffff0b;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .button.primary {
+      color: #10091c;
+      border: 0;
+      background: linear-gradient(110deg, var(--purple), var(--cyan));
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    section { padding: 30px 0 48px; }
+
+    .section-title {
+      margin: 0 0 8px;
+      font-size: clamp(25px, 5vw, 36px);
+    }
+
+    .section-note {
+      margin: 0 0 22px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 22px;
+      border: 1px solid #ffffff14;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #1b1630, #100e1d);
+      box-shadow: 0 12px 35px #00000020;
+    }
+
+    .card .icon {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .card h3 { margin: 0 0 8px; }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .notice {
+      padding: 20px;
+      border-left: 3px solid var(--cyan);
+      border-radius: 10px;
+      background: #57e6ff0b;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 26px 0;
+      border-top: 1px solid #ffffff16;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 55px; }
+      .nav { justify-content: center; }
+      .nav-links { justify-content: center; }
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">MERKYRIEV <span>| HASSLE</span></a>
+      <nav class="nav-links">
+        <a href="#about">О проекте</a>
+        <a href="#guides">Гайды</a>
+        <a href="#updates">Обновления</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <span class="tag">НЕОФИЦИАЛЬНЫЙ ФАН-ПОРТАЛ</span>
+      <h1>Добро пожаловать<br>в <span>Hassle Online</span></h1>
+      <p>
+        Портал Merkyriev о мире Hassle Online:
+        полезные материалы, заметки и игровые новости.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="#guides">Открыть материалы</a>
+        <a class="button" href="#about">О проекте</a>
+      </div>
+    </section>
+
+    <section class="wrap" id="about">
+      <h2 class="section-title">О портале</h2>
+      <p class="section-note">
+        Место для материалов и полезной информации об игре.
+      </p>
+      <div class="notice">
+        Это независимый фан-проект Merkyriev. Портал не является
+        официальным сайтом Hassle Online и не связан с разработчиками игры.
+      </div>
+    </section>
+
+    <section class="wrap" id="guides">
+      <h2 class="section-title">Игровые материалы</h2>
+      <p class="section-note">
+        Здесь будут появляться новые публикации.
+      </p>
+      <div class="grid">
+        <article class="card">
+          <div class="icon">📘</div>
+          <h3>Гайды</h3>
+          <p>Пошаговые инструкции и советы для игроков. Материалы добавим позже.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🎮</div>
+          <h3>Игровые заметки</h3>
+          <p>Полезные наблюдения, подборки и интересные моменты из игры.</p>
+        </article>
+        <article class="card">
+          <div class="icon">📰</div>
+          <h3>Новости портала</h3>
+          <p>Анонсы новых разделов и публикаций на сайте Merkyriev.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" id="updates">
+      <h2 class="section-title">Обновления</h2>
+      <p class="section-note">
+        Сайт развивается. Новые материалы появятся здесь по мере подготовки.
+      </p>
+      <div class="card">
+        <h3>Первый запуск портала</h3>
+        <p>Создана стартовая страница Merkyriev | Hassle Online.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© Merkyriev · Фан-портал Hassle Online</p>
+      <p>Hassle Online является собственностью соответствующих правообладателей.</p>
+    </div>
+  </footer>
+</body>
+</html>
